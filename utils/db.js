@@ -1,9 +1,14 @@
-const mysql2 = require('mysql2')
-const pool = mysql2.createPool({
-    host:'localhost' , 
-    user:'FDS_ADMIN' ,
-    password:'metsyssdf'  ,
-    database:'food_delivery_system'
-})
+const mysql2 = require('mysql2');
 
-module.exports = pool
+const pool = mysql2.createPool({
+    host: 'trolley.proxy.rlwy.net',
+    port: 23266,
+    user: 'root',
+    password: 'rwiTfNekjoDwmuhMLmSVzNJkSaBPHXzg',
+    database: 'railway',
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+});
+
+module.exports = pool;
